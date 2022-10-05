@@ -18,37 +18,32 @@
 #     print("Nie")
 #zad 4
 # waga=int(input("ile ton?:"))
-# if waga<20:
+# LIMIT=20
+# if waga<=LIMIT:
 #     print("Tak")
 # else:
 #     print("Nie")
 #zad 5
-# a=int(input("podaj liczbe a:"))
-# b=int(input("podaj liczbe b:"))
-# c=int(input("podaj liczbe c:"))
-# if c>a and c<b:
+# a, b, c = map(int, input().split())
+# if (c>a and c<b) or (b<c and a>c):
 #     print("Tak")
 # else:
 #     print("Nie")
 #zad 6
-# p=int(input("podaj liczbe pierwszą p:"))
-# a=int(input("podaj liczbe a:"))
-# if (a**p-a)%p==0:
-#     print("Tak")
+# a=int(input("podaj cokolwiek:"))
+# p=int(input("Podaj liczbe pierwszą:"))
+# if ((a**p-a)%p)==0:
+#   print("Tak")
 # else:
-#     print("Nie")
+#   print("Nie")
 #zad 7
 # s=float(input("podaj wartość skoku:"))
 # p=float(input("wprowadź wartość startu:"))
 # k=float(input("wprowadź wartość końca:"))
-# if s*3+p>=k:
+# if (s*3+p)>=k:
 #     print("Tak")
-#     print("pokonała dystansu:")
-#     print(s*3)
+#     print("pokonała dystansu:", s*3)
 # else:
 #     print("Nie")
-#     print("pokonała dystansu:")
-#     print(s*3)
-#     print("zabrakło jej:")
-#     print(k-(s*3+p))
-
+#     print("pokonała dystansu:", s*3)
+#     print("zabrakło jej:", k-(s*3+p))
