@@ -17,30 +17,33 @@
 # k=int(input("podaj liczbe całkowitą k:"))
 # l=int(input("podaj liczbe całkowitą l:"))
 # m=int(input("podaj liczbe całkowitą m:"))
-# if (k==l):
-#  print("Tak",k)
+# if (k==l and l==m):
+#   print("Są 3 takie same",m)
 # else:
-#   if (k==m):
-#    print("Tak",k)
-#   else:
-#    if (m==l):
-#     print("Tak",m)
+#  if (k==l):
+#   print("Tak",k)
+#  else:
+#    if (k==m):
+#     print("Tak",k)
 #    else:
-#      print("Nie ma 2 takich samych liczb")
+#     if (m==l):
+#      print("Tak",m)
+#     else:
+#       print("Nie ma 2 takich samych liczb")
 # Zad 4
 # a=int(input("podaj liczbe całkowitą a:"))
 # b=int(input("podaj liczbe całkowitą b:"))
 # c=int(input("podaj liczbe całkowitą c:"))
 # d=int(input("podaj liczbe całkowitą d:"))
 # w=0
-# if (a<b and a<c and a<d):
-#   w=a
-# if (b<a and b<c and b<d):
-#   w=b
-# if (c<a and c<b and c<d):
-#   w=c
-# if (d<a and d<b and d<c):
-#   w=d
+# if (a<=b and a<=c and a<=d):
+#  w=a
+# if (b<=a and b<=c and b<=d):
+#  w=b
+# if (c<=a and c<=b and c<=d):
+#  w=c
+# if (d<=a and d<=b and d<=c):
+#  w=d
 # print("najmniejsza liczba to",w)
 # Zad 5
 # a=int(input("podaj liczbe a:"))
