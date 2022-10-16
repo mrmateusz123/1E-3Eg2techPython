@@ -50,16 +50,32 @@ b=int(input("podaj bok b:"))
 c=int(input("podaj bok c:"))
 n=0
 m=0
-if (a==b and b==c):
-  print("trójkąt ostrokątny")
-if (a==b or b==c or a==c andd)
-if (a>b and a>c):
+if (a==b or b==c or a==c):
+ if (a==b and b==c):
+   print("trójkąt ostrokątny")
+ if (a==b):
+   if(a>c):
+     print("trójkąt ostrokątny")
+   else:
+     print("trójkąt rozwartokątny")
+ if (a==c):
+   if(a>b):
+     print("trójkąt ostrokątny")
+   else:
+    print("trójkąt rozwartokątny")
+ if(c==b):
+   if(b>a):
+     print("trójkąt ostrokątny")
+   else:
+     print("trójkąt rozwartokątny")
+else:
+ if (a>b and a>c):
   n=a*a
   m=b*b+c*c
-if (b>c and b>c):
+ if (b>c and b>c):
   n=b*b
   m=a*a+c*c
-if (c>a and c>b):
+ if (c>a and c>b):
   n=c*c
   m=b*b+a*a
  if (m==n):
@@ -67,4 +83,4 @@ if (c>a and c>b):
  if (m>n):
   print("Trójkąt ostrokątny")
  if (m<n):
-  print("Trójkąt rozwartokątny")a
+  print("Trójkąt rozwartokątny")
