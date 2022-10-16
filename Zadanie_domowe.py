@@ -17,10 +17,16 @@
 # k=int(input("podaj liczbe całkowitą k:"))
 # l=int(input("podaj liczbe całkowitą l:"))
 # m=int(input("podaj liczbe całkowitą m:"))
-# if (k==l or l==m or k==m):
-#  print("Tak")
+# if (k==l):
+#  print("Tak",k)
 # else:
-#  print("Nie")
+#   if (k==m):
+#    print("Tak",k)
+#   else:
+#    if (m==l):
+#     print("Tak",m)
+#    else:
+#      print("Nie ma 2 takich samych liczb")
 # Zad 4
 # a=int(input("podaj liczbe całkowitą a:"))
 # b=int(input("podaj liczbe całkowitą b:"))
@@ -45,42 +51,42 @@
 # else:
 #  print("Nie")
 # Zad 6
-a=int(input("podaj bok a:"))
-b=int(input("podaj bok b:"))
-c=int(input("podaj bok c:"))
-n=0
-m=0
-if (a==b or b==c or a==c):
- if (a==b and b==c):
-   print("trójkąt ostrokątny")
- if (a==b):
-   if(a>c):
-     print("trójkąt ostrokątny")
-   else:
-     print("trójkąt rozwartokątny")
- if (a==c):
-   if(a>b):
-     print("trójkąt ostrokątny")
-   else:
-    print("trójkąt rozwartokątny")
- if(c==b):
-   if(b>a):
-     print("trójkąt ostrokątny")
-   else:
-     print("trójkąt rozwartokątny")
-else:
- if (a>b and a>c):
-  n=a*a
-  m=b*b+c*c
- if (b>c and b>c):
-  n=b*b
-  m=a*a+c*c
- if (c>a and c>b):
-  n=c*c
-  m=b*b+a*a
- if (m==n):
-  print("Trójkąt prostokątny")
- if (m>n):
-  print("Trójkąt ostrokątny")
- if (m<n):
-  print("Trójkąt rozwartokątny")
+# a=int(input("podaj bok a:"))
+# b=int(input("podaj bok b:"))
+# c=int(input("podaj bok c:"))
+# n=0
+# m=0
+# if (a==b or b==c or a==c):
+#  if (a==b and b==c):
+#    print("trójkąt ostrokątny")
+#  if (a==b):
+#    if(a>c):
+#      print("trójkąt ostrokątny")
+#    else:
+#      print("trójkąt rozwartokątny")
+#  if (a==c):
+#    if(a>b):
+#      print("trójkąt ostrokątny")
+#    else:
+#     print("trójkąt rozwartokątny")
+#  if(c==b):
+#    if(b>a):
+#      print("trójkąt ostrokątny")
+#    else:
+#      print("trójkąt rozwartokątny")
+# else:
+#  if (a>b and a>c):
+#   n=a*a
+#   m=b*b+c*c
+#  if (b>c and b>c):
+#   n=b*b
+#   m=a*a+c*c
+#  if (c>a and c>b):
+#   n=c*c
+#   m=b*b+a*a
+#  if (m==n):
+#   print("Trójkąt prostokątny")
+#  if (m>n):
+#   print("Trójkąt ostrokątny")
+#  if (m<n):
+#   print("Trójkąt rozwartokątny")
