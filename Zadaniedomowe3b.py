@@ -31,3 +31,7 @@
 #   m=m+i
 # print(m)
 # Zadanie 8
+# Zadanie 10
+# for i in range(1000):
+#   if (i%100)**2==i:
+#     print(i)
