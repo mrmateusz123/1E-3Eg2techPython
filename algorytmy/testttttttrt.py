@@ -16,7 +16,7 @@
 #   a, b = b, a%b
 # print(a)
 # print("1 sposób")
-# a, b=int(input()), int(input())
+a, b=int(input()), int(input())
 w=a*b
 while b>0:
   a, b = b, a%b
