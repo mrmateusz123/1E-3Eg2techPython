@@ -5,7 +5,8 @@ run = "python3 main.py"
 language = "python3"
 # algorytmy/
 # eksperymenty/
-entrypoint = "algorytmy/xd.py"
+# szyfrowanie/
+entrypoint = "listy/listy.py"
 # A list of globs that specify which files and directories should
 # be hidden in the workspace.
 hidden = ["venv", ".config", "**/__pycache__", "**/.mypy_cache", "**/*.pyc"]

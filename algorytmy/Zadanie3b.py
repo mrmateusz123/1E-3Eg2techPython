@@ -41,24 +41,6 @@
 #   t=t+100
 # print(w-t)
 # Zadanie 10
-# w2=0
-# w=0
-# t=0
-# t2=0
-# o=10
-# for i in range(0,1000):
-#   o=10
-#   if(i>100):
-#     o=o+990
-#   elif(i>10):
-#     o=o+90
-#   i=i-w
-#   t=i*i-(o*t2)
-#   if(t<0):
-#     w=0
-#   if(t>0):
-#     if(i==t):
-#       print(i)
-#     elif(t>=10):
-#       t2=t2+1
-#       w=w+1
+# for i in range(1,1001):
+#   if((i*i)%10==i or (i*i)%100==i or (i*i)%1000==i):
+#     print(i)
