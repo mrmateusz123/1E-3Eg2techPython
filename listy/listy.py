@@ -54,8 +54,8 @@
 # print(m)
 
 
-import random
-T = [random.randint(0, 100) for i in range(40)]
+from random import randint
+T = [randint(0, 100) for i in range(40)]
 print(T)
 
 #zadanie 1
@@ -69,7 +69,27 @@ print(T)
 
 #zadanie 4
 
+
 #zadanie 5
 
 #zadanie 6
-print(T.count(max(T)))
+# print(T.count(max(T)))
+
+#zadanie 7
+# print(T.count(min(T)))
+
+#zadanie 8
+# a = int(input())
+# print(T.count(a))
+
+#zadanie 9
+# s=0
+# for i in range(40):
+#   s=s+T[i]
+# print(round(s/len(T),1))
+
+#zadanie 10
+# s=0
+# for i in range(0,40,2):
+#   s=s+T[i]
+# print(s)
