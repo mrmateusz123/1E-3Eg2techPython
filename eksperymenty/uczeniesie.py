@@ -83,6 +83,6 @@
 #     if czy_wygrana(plansza, 'O'):
 #         print("Gracz O wygrał!")
 #         break
-n=int(input("Podaj ile liczb nieparzystych:"))
-for i in range(1,n*2+1,2):
-  print(i*i)
+# n=int(input("Podaj ile liczb nieparzystych:"))
+# for i in range(1,n*2+1,2):
+#   print(i*i)

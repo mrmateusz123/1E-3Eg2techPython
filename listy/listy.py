@@ -68,9 +68,12 @@ print(T)
 # print(min(T), "-" ,max(T))
 
 #zadanie 4
-
+# S = list(set(T))
+# print(S[len(S)-2])
 
 #zadanie 5
+# S = list(set(T))
+# print(S[len(S)-(len(S)-1)])
 
 #zadanie 6
 # print(T.count(max(T)))
@@ -93,3 +96,71 @@ print(T)
 # for i in range(0,40,2):
 #   s=s+T[i]
 # print(s)
+
+#zadanie 11
+# s=0
+# for i in range(1,40,2):
+#   s=s+T[i]
+# print(round(s/len(T/2),1))
+
+#zadanie 12
+# l=len(T)
+# l1=0
+# for i in range(len(T)):
+#   for j in range(len(T)):
+#     if(T[i]==T[j]):
+#       l1+=1
+#     if(l1>1):
+#       break
+#   if(l1>1):
+#     l=l-1
+#   l1=0
+# print(l)
+
+#zadanie 13
+# l=0
+# for j in range(10,100):
+#   for i in range(len(T)):
+#     if(j==T[i]):
+#       break
+#     else:
+#       l+=1
+#     if(l==40):
+#       print(j)
+#   l=0
+
+#zadanie 14
+# l=len(T)
+# l1=0
+# for i in range(len(T)):
+#   for j in range(len(T)):
+#     if(T[i]==T[j]):
+#       l1+=1
+#     if(l1>1):
+#       break
+#   if(l1>1):
+#     l=l-1
+#   l1=0
+# print(len(T)-l)
+
+#zadanie 15
+d1=0
+d2=0
+d3=0
+s1=0
+s2=0
+s3=0
+for i in range(len(T)):
+  if(T[i]<=T[i+1] and d1==0):
+    d1=i
+  elif(T[i]>=T[i+1]):
+    d2=i
+    d3=d2-d1
+    if(d3>s3):
+      s1=d1
+      s2=d2
+      s3=d3
+      d1=0
+      d2=0
+      d3=0
+print(f"przedziały{s1}-{s2}")
