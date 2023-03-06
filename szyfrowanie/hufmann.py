@@ -17,3 +17,22 @@ if(l>1):
   H+=W[i]
 print(W)
 print(H)
+
+
+
+w="ABBCCCDDEFF"
+h=""
+l1=1
+for i in range(len(w)-1):
+  if(w[i]==w[i+1]):
+    l1+=1
+  else:
+    if(l1>1):
+      h+=str(l1)   
+    h+=w[i]
+    l1=1
+if(l>1):
+  h+=str(l)
+  h+=w[i] 
+print(w)
+print(h)
