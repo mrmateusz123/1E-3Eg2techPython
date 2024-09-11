@@ -80,7 +80,73 @@ def z8():
     else:
         print("Nie")
     zada()
+def z9():
+    n=int(input("n:"))
+    c=2
+    while(n>1):
+        while(n%c==0):
+            print(n," ",c)
+            n=n/c
+        c+=1
+def z10():
+    n=int(input("n:"))
+    c=2
+    s=0
+    while(n>1):
+        while(n%c==0):
+            s+=c
+            n=n/c
+        c+=1
+    print(s)
+def z11():
+    n=int(input("n:"))
+    c=2
+    s=0
+    while(n>1):
+        while(n%c==0):
+            s+=c
+            n=n/c
+        c+=1
+    for i in range(1,s):
+        if(s%i==0):
+            c += 0
+        else:
+            c += 1
+    if(c==0):
+        print("tak",s)
+    else:
+        print("nie",s)
+def z12():
+    n=int(input("n:"))
+    c=2
+    list = []
+    s=0
+    while(n>1):
+        while(n%c==0):
 
+            for i in range(0,len(list)):
+                if(c!=list[i]):
+
+                    s+=1
+            n=n/c
+        c+=1
+    print(s)
+def z13():
+    n=int(input("n:"))
+    n2=str(n)
+    l=[]
+    t=0
+    print(len(n2))
+    while(n>0):
+        l[t]=n[(len(n2)-t-1)]
+        t+=1
+    for i in range(len(l)):
+        print(l[i])
+    c=2
+    while(n>1):
+        while(n%c==0):
+            n=n/c
+        c+=1
 def zada():
     zad = int(input("które zadanie?"))
     if(zad==1): z1()
@@ -91,6 +157,11 @@ def zada():
     elif(zad==6): z6()
     elif(zad==7): z7()
     elif(zad==8): z8()
+    elif(zad==9): z9()
+    elif(zad==10): z10()
+    elif(zad==11): z11()
+    elif(zad==12): z12()
+    elif(zad==13): z13()
     elif(zad==0): print("end")
     else:
         print("ni ma takiego zadania")
