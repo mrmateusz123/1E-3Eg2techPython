@@ -1,0 +1,55 @@
+def sit(n):
+    czy_pier = [True] * (n + 1)
+    p = 2
+    while p * p <= n:
+        if czy_pier[p]:
+            for i in range(p * p, n + 1, p):
+                czy_pier[i] = False
+        p = p + 1
+    return czy_pier
+def sit(l,n):
+    czy_pier = [True] * (n + 1)
+    p = 2
+    while p * p <= n:
+        if l[p]:
+            for i in range(p * p, n + 1, p):
+                czy_pier[i] = False
+        p = p + 1
+    return czy_pier
+def z1():
+    n = int(input())
+    czy_p = sit(n)
+    for i in range(n):
+        print(i + 1, " ", czy_p[i+1])
+def z2():
+    n = int(input())
+    czy = sit(n)
+    sum = 0
+    li = 0
+    for i in range (1,n+1):
+        if(czy[i]):
+            sum+=i
+            li+=1
+    print("suma: ",sum," ","liczba: ",li)
+def z3():
+    n = int(input())
+    czy_pier = [True] * (n + 1)
+    p = 2
+    while p * p <= n:
+        if czy_pier[p]:
+            te = p*p
+            while(te < n + 1):
+                czy_pier[te] = False
+                te=te+p
+        p = p + 1
+    for i in range(1,n+1):
+        print(i," ",czy_pier[i])
+def z4():
+    p1 = open("liczby.txt")
+    li = list(map(int, p1.read().split()))
+    set(li)
+    n = len(li)
+    czy_p = sit(li,n)
+    for i in range(n):
+        print(i + 1, " ", czy_p[i+1])
+z4()
