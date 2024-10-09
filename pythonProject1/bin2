@@ -59,7 +59,18 @@ def z3():
             L[j]=int(L[j])
         if(wy(L,10,len(L))):
             print(L)
+def z4():
+    c = open("ciagi2.txt","r")
+    n = int(c.readline().rstrip())
+    for i in range(n):
+        d = int(c.readline().rstrip())
+        l = list(map(int,c.readline().split()))
+        if(wy(l,10,len(l))):
+            print(l)
+    c.close()
+def z5():
 
+    return 0
 def zadania():
     zad = int(input("które zadanie?:"))
     if (zad == 0):
@@ -71,6 +82,10 @@ def zadania():
             z2()
         elif zad == 3:
             z3()
+        elif zad == 4:
+            z4()
+        elif zad == 5:
+            z5()
         print()
         zadania()
 
