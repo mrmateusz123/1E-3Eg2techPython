@@ -53,7 +53,7 @@ def zad3():
     pom = [0 for i in range(len(ciag))]
     sortuj(ciag, 0, len(ciag) - 1,pom)
     for i in ciag:
-        plik.write(str(i) + " ")
+        plik.write(str(i) + "\n")
 def zadania():
     n = input("zadanie: ")
     if n!='q':
