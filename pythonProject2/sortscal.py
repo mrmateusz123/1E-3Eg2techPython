@@ -1,3 +1,4 @@
+import math
 import random
 
 
@@ -54,6 +55,14 @@ def zad3():
     sortuj(ciag, 0, len(ciag) - 1,pom)
     for i in ciag:
         plik.write(str(i) + "\n")
+def zad4():
+    li = input('wybierz 1-3: ')
+    if li=='1':
+        m = int(input())
+        n = math.pow(2,m)
+        T = [i for i in range(n)]
+
+
 def zadania():
     n = input("zadanie: ")
     if n!='q':
@@ -63,6 +72,8 @@ def zadania():
             zad2()
         elif n=='3':
             zad3()
+        elif n=='4':
+            zad4()
         else:
             print("błąd")
         print("\n\n")
