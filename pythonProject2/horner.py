@@ -6,9 +6,9 @@ def horner(T,x,n):
         y += T[i-1] * pot
     return y
 def honer2(T,x):
-    n = len(T)-1
-    if(n==0): return T[0]
-    return x*honer2(T[1:],x)+T[0]
+    n = 0
+    if(n==len(T)-1): return T[len(T)-1]
+    return x*honer2(T[:len(T)-1],x)+T[len(T)-1]
 
 def z1():
     t = [int(i) for i in input().split()]
@@ -18,4 +18,10 @@ def z2():
     t = [int(i) for i in input().split()]
     x = t.pop(0)
     print(honer2(t,x))
-z2()
+def z5():
+    t = [int(i) for i in input().split()]
+    x = t.pop(0)
+    t.reverse()
+    print(horner(t,x,len(t)-1))
+for i in range(1,3):
+    print(exec(f"z{str(i)}()"))
