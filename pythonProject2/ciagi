@@ -1,0 +1,22 @@
+def z1():
+    ciag = list(map(int,open("liczby.txt","r").readline().split()))
+    t = [int(i) for i in range(len(ciag))]
+    te = 1
+    for i in range(len(ciag)):
+        for k in range(len(ciag)-te+1):
+            for j in range(0,te):
+                if(k+j<len(ciag)):
+                    print(ciag[k+j],end=" ")
+            print()
+        te+=1
+        print()
+
+def zad():
+    inp = input("Zadanie(q by zakończyć):")
+    if(inp != "q"):
+        try:
+            print(exec("z" + inp + "()"))
+        except:
+            print("bład")
+        zad()
+zad()
