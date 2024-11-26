@@ -1,10 +1,9 @@
 def z1():
     ciag = list(map(int,open("liczby.txt","r").readline().split()))
-    t = [int(i) for i in range(len(ciag))]
     te = 1
     for i in range(len(ciag)):
         for k in range(len(ciag)-te+1):
-            for j in range(0,te):
+            for j in range(te):
                 if(k+j<len(ciag)):
                     print(ciag[k+j],end=" ")
             print()
