@@ -11,7 +11,7 @@ def zad():
     inp = input("Zadanie(q by zakończyć):")
     if(inp != "q"):
         try:
-            print(exec("z" + inp + "()"))
+            exec("z" + inp + "()")
         except:
             print("bład")
         zad()
