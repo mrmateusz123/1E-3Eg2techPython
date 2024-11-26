@@ -1,13 +1,11 @@
 def z1():
     ciag = list(map(int,open("liczby.txt","r").readline().split()))
-    te = 1
-    for i in range(len(ciag)):
-        for k in range(len(ciag)-te+1):
-            for j in range(te):
+    for i in range(1,len(ciag)+1):
+        for k in range(len(ciag)-i+1):
+            for j in range(i):
                 if(k+j<len(ciag)):
                     print(ciag[k+j],end=" ")
             print()
-        te+=1
         print()
 
 def zad():
