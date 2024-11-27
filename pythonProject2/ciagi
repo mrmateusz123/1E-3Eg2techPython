@@ -6,13 +6,23 @@ def z1():
                 print(ciag[k+j],end=" ")
             print()
         print()
-
+def z2():
+    ciag = list(map(int, open("liczby.txt", "r").readline().split()))
+    for i in range(len(ciag)):
+        for j in range(len(ciag)-i):
+            for k in range(j+1):
+                print(ciag[k+i],end=" ")
+            print()
+        print()
+def z3():
+    pass
 def zad():
-    inp = input("Zadanie(q by zakończyć):")
+    inp = input("Zadanie(q by zakończyć): ")
     if(inp != "q"):
         try:
             exec("z" + inp + "()")
+            print('\n')
         except:
-            print("bład")
+            print("błąd")
         zad()
 zad()
