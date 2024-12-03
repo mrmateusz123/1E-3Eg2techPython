@@ -20,25 +20,73 @@ def z4():
         print(*ciag[i:])
 def z5():
     pass
-def z6():
+def z610help(znak):
     ciag = list(map(int, input().split(" ")))
-    if(z610help(ciag),"<="): print("tak")
-    else: print("nie")
-def z610help(ciag,znak):
     for i in range(len(ciag)-1):
-        if(exec("ciag[i]" + znak + "ciag[i+1])")):
+        if(eval(f"{ciag[i]} {znak} {ciag[i+1]}")==False):
             return False
     return True
+def z6():
+    if(z610help("<")): print("tak")
+    else: print("nie")
+
 def z7():
+    if(z610help(">")): print("tak")
+    else: print("nie")
+
+def z8():
+    if (z610help(">=")):
+        print("tak")
+    else:
+        print("nie")
+def z9():
+    if(z610help("<=")): print("tak")
+    else: print("nie")
+def z10():
+    ciag = list(map(int, input().split(" ")))
+    if(z610help("=")): print("tak")
+    else: print("nie")
+def z11():
+    ciag = list(map(int,open("liczby.txt","r").readline().split()))
+    najciag = []
+    najciag2 = []
+    for i in range(1,len(ciag)):
+        if(ciag[i-1]<=ciag[i]):
+            najciag.append(ciag[i-1])
+        else:
+            najciag.append(ciag[i-1])
+            if(len(najciag)>=len(najciag2)):
+                najciag2=najciag
+            najciag = []
+    print(len(najciag2))
+def z12():
+    ciag = list(map(int, open("liczby.txt", "r").readline().split()))
+    najciag = []
+    najciag2 = []
+    for i in range(1, len(ciag)):
+        if (ciag[i - 1] <= ciag[i]):
+            najciag.append(ciag[i - 1])
+        else:
+            najciag.append(ciag[i - 1])
+            if (len(najciag) >= len(najciag2)):
+                najciag2 = najciag
+            najciag = []
+    print(najciag2)
+def z13():
     pass
 def zad():
     inp = input("Zadanie(q by zakończyć): ")
-    if(inp != "q"):
+    if(inp != "q" and inp != "t"):
         try:
             exec("z" + inp + "()")
             print('\n')
         except:
             print("błąd")
         zad()
-print(exec("1<2"))
+    elif(inp == 't'):
+        inp = input("test: ")
+        exec("z" + inp + "()")
+        print('\n')
+        zad()
+
 zad()
