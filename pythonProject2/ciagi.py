@@ -68,25 +68,50 @@ def z12():
             najciag.append(ciag[i - 1])
         else:
             najciag.append(ciag[i - 1])
-            if (len(najciag) >= len(najciag2)):
+            if (len(najciag) > len(najciag2)):
                 najciag2 = najciag
             najciag = []
     print(najciag2)
 def z13():
-    pass
+    pliczek = list(map(int,open('pi.txt').read().split()))
+    pliczekz = open("pi_przykład.txt",'w')
+    t=0
+    for i in range(len(pliczek)-1):
+        if((pliczek[i]*10)+pliczek[i+1]>90):
+            t+=1
+            print(i+1,pliczek[i],pliczek[i+1])
+    print("t=",t)
+    pliczekz.write(f'{t}')
+    pliczekz.close()
+def z14():
+    pliczek = list(map(int,open('pi.txt').read().split()))
+    pliczekz = open("pi_przykład.txt",'w')
+    test = []
+    for i in range(10):
+        for j in range(10):
+            test.append(str(i)+str(j))
+    naj = 0
+    najm = 0
+    najmm = 0
+    for i in range(len(test)):
+        for j in range(len(pliczek)-1):
+            if(test[i]==f'{str(pliczek[j])}{str(pliczek[j+1])}'):
+                naj+=1
+                print(test[i],pliczek[j],pliczek[j+1])
+        if(naj>najm):
+            najm = naj
+            najmm = test[i]
+    print(najmm)
+
+
+
 def zad():
     inp = input("Zadanie(q by zakończyć): ")
-    if(inp != "q" and inp != "t"):
+    if(inp != "q"):
         try:
             exec("z" + inp + "()")
             print('\n')
-        except:
-            print("błąd")
+        except Exception as error:
+            print("błąd:",error)
         zad()
-    elif(inp == 't'):
-        inp = input("test: ")
-        exec("z" + inp + "()")
-        print('\n')
-        zad()
-
 zad()
