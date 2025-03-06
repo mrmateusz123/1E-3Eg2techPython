@@ -34,6 +34,30 @@ def z4():
                 maxdl = dl
                 dl = 1
     print(maxdl)
+def z5():
+    pliczek = list(map(int, open('ciag.txt').read().split()))
+    maxs = 0
+    t = []
+    for i in range(0,len(pliczek)-2):
+        if(sum(pliczek[i:i+3]) >= maxs):
+            maxs = sum(pliczek[i:i+3])
+            t = pliczek[i:i+3]
+    print(maxs,t)
+def z6():
+    pliczek = list(map(int, open('ciag.txt').read().split()))
+    pliczekniepliczek = [5,23,6,2,4,5,3,3]
+    s = pliczek[0]
+    maxs = 0
+    t = []
+    for i in range(len(pliczek)):
+        for j in range(1,len(pliczek)-i+1):
+            print(pliczek[i:i+j])
+            s = sum(pliczek[i:i+j])
+            if (s >= maxs):
+                maxs = s
+                t = pliczek[i:i+j]
+            s = 0
+    print(maxs,t)
 
 def zad():
     inp = input("Zadanie(q by zakończyć): ")
