@@ -1,0 +1,81 @@
+import random
+
+
+def z1quick_sort(ciag,left,right):
+    i = left
+    j = right
+    pivot = ciag[(i+j)//2]
+    while i<=j:
+        while ciag[i] < pivot:
+            i= i+1
+        while ciag[j] > pivot:
+            j= j-1
+        if i<=j:
+            pom= ciag[i]
+            ciag[i] = ciag[j]
+            ciag[j] = pom
+            j = j - 1
+            i = i+ 1
+    if j>left:
+        z1quick_sort(ciag,left,j)
+    if i<right:
+        z1quick_sort(ciag,i,right)
+def z2quick_sort(ciag):
+    n = len(ciag)
+    if n<2:
+        return ciag
+    pivot = ciag[n//2]
+    left = [x for x in ciag if x < pivot]
+    midle = [x for x in ciag if x == pivot]
+    right = [x for x in ciag if x > pivot]
+    return z2quick_sort(left) and z2quick_sort(right)
+def z1():
+    pliczek = open("liczby (1).txt")
+    liczby = list(map(int,pliczek.read().split()))
+    print(liczby)
+    z1quick_sort(liczby,0,len(liczby)-1)
+    print(liczby)
+def z2():
+    pliczek = open("liczby (1).txt")
+    liczby = list(map(int,pliczek.read().split()))
+    print(liczby)
+    print(z2quick_sort(liczby))
+
+def z3():
+    print()
+def z4():
+    pliczek = open("liczby (1).txt")
+    liczby = list(map(int,pliczek.read().split()))
+    print(liczby)
+    
+def Sortuj_szybko(lewy,prawy, d):
+    i = (lewy + prawy) / 2
+    pivot = d[i]
+    d[i] = d[prawy]
+    for i,j in range(prawy):
+        
+
+
+def z5():
+    num = int(input("jak duża?: "))
+    rang = list(map(int,input("range: ").split()))
+    l = []
+    for i in range(num):
+        l.append(random.randint(rang[0],rang[1]))
+    print(l)
+
+def zad():
+    inp = input("Zadanie(q by zakończyć,t by bardziej przetestować): ")
+    if (inp != 'q'):
+        try:
+            if (inp != 't'):
+                exec("z" + inp + "()")
+            else:
+                inp = input("testowanie: ")
+                if(inp != 'q'):
+                    exec(inp)
+            print('\n')
+        except Exception as error:
+            print("błąd:", error)
+        zad()
+zad()
