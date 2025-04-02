@@ -1,0 +1,27 @@
+licz1 = input()
+licz2 = input()
+sys = int(input())
+licz1= licz1[::-1]
+licz2 = licz2[::-1]
+add = 0
+wyn = ""
+for i in range(min(len(licz1),len(licz2))):
+    w = int(licz1[i])+int(licz2[i])+add
+    if(w>=sys):
+        w = w-sys
+        add = 1
+    else:
+        add = 0
+    wyn += str(w)
+for i in range(max(len(licz1),len(licz2))-min(len(licz1),len(licz2))):
+    w = int(licz1[i]) + add
+    if (w >= sys):
+        w = w - sys
+        add = 1
+    else:
+        add = 0
+    wyn += str(w)
+if(add>0):
+    wyn+=str(add)
+wyn = wyn[::-1]
+print(wyn)
