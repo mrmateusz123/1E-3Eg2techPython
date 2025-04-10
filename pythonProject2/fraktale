@@ -1,0 +1,97 @@
+import turtle
+import tkinter as tk
+
+def platekKocha():
+    def rysuj_krzywa_kocha(t, dlugosc, poziom):
+        if poziom == 0:
+            t.forward(dlugosc)
+        else:
+            dlugosc /= 3.0
+            rysuj_krzywa_kocha(t, dlugosc, poziom - 1)
+            t.left(60)
+            rysuj_krzywa_kocha(t, dlugosc, poziom - 1)
+            t.right(120)
+            rysuj_krzywa_kocha(t, dlugosc, poziom - 1)
+            t.left(60)
+            rysuj_krzywa_kocha(t, dlugosc, poziom - 1)
+
+
+    def rysuj_platek_kocha(poziom):
+        ekran = turtle.Screen()
+        ekran.setup(500, 500)
+        ekran.title("Płatek Kocha")
+
+        t = turtle.Turtle()
+        t.speed(0)  # Najszybsze rysowanie
+        t.hideturtle()
+
+        # Początkowe ustawienie pozycji
+        t.penup()
+        t.goto(-150, 100)
+        t.pendown()
+
+        for _ in range(3):
+            rysuj_krzywa_kocha(t, 300, poziom)  # Rysowanie krzywej Kocha
+            t.right(120)
+
+        ekran.mainloop()
+
+
+    # Uruchom rysowanie płatka Kocha
+    rysuj_platek_kocha(poziom=3)
+def dywanSierpinskiego():
+    # Funkcja rysująca Dywan Sierpińskiego
+    def rysuj_dywan(x, y, rozmiar, stopien):
+        if stopien == 0:
+            # Rysowanie kwadratu
+            canvas.create_rectangle(x, y, x + rozmiar, y + rozmiar, fill="black")
+        else:
+            # Dzielimy kwadrat na 9 mniejszych kwadratów i usuwamy środkowy
+            nowy_rozmiar = rozmiar / 3
+            # Rekurencyjnie rysujemy pozostałe kwadraty
+            for i in range(3):
+                for j in range(3):
+                    if i != 1 or j != 1:  # Pomijamy środkowy kwadrat
+                        rysuj_dywan(x + i * nowy_rozmiar, y + j * nowy_rozmiar, nowy_rozmiar, stopien - 1)
+
+    # Ustawienia okna
+    root = tk.Tk()
+    root.title("Dywan Sierpińskiego")
+
+    # Ustawienia płótna
+    canvas = tk.Canvas(root, width=540, height=540)
+    canvas.pack()
+
+    # Parametry rysowania
+    rozmiar = 500  # Rozmiar początkowego kwadratu
+    stopien = 7  # Stopień fraktala (ilość poziomów)
+
+    # Wywołanie funkcji rysującej
+    rysuj_dywan(20, 20, rozmiar, stopien)
+
+    root.mainloop()
+def zbiorCantora():
+    def rysuj_cantora(x, y, dlugosc, stopien):
+        if stopien == 0:
+            # Rysowanie linii, jeśli doszliśmy do najgłębszego poziomu
+            canvas.create_line(x, y, x + dlugosc, y, width=2)
+        else:
+            # Rysujemy dwie części, pomijając środkową
+            rysuj_cantora(x, y, dlugosc / 3, stopien - 1)
+            rysuj_cantora(x + 2 * dlugosc / 3, y, dlugosc / 3, stopien - 1)
+
+    # Ustawienia okna
+    root = tk.Tk()
+    root.title("Zbiór Cantora")
+
+    # Ustawienia płótna
+    canvas = tk.Canvas(root, width=600, height=400)
+    canvas.pack()
+
+    # Wywołanie funkcji rysującej
+    rysuj_cantora(50, 50, 500, 0)  # zbiór Cantora stopnia 0
+    rysuj_cantora(50, 150, 500, 1)  # zbiór Cantora stopnia 1
+    rysuj_cantora(50, 250, 500, 2)  # zbiór Cantora stopnia 2
+    rysuj_cantora(50, 350, 500, 3)  # zbiór Cantora stopnia 3
+    root.mainloop()
+dywanSierpinskiego()
